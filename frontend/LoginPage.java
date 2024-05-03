@@ -1,4 +1,4 @@
-package Fronted;
+package frontend;
 
 import dto.User;
 import services.impl.UserImpl;
@@ -7,8 +7,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 public class LoginPage extends JFrame {
+
+    private static User user;
     /*Add properties to the window as follows：*/
     JButton Login =      new JButton("Login");
     JButton Cancel =     new JButton("Reset");
@@ -59,7 +60,7 @@ public class LoginPage extends JFrame {
                     String myusername = username.getText().trim();
                     String mypassword = new String(password.getPassword()).trim();
                     UserImpl userImpl=new UserImpl();
-                    User user=userImpl.login(myusername, mypassword);
+                    user=userImpl.login(myusername, mypassword);
                     if(user!=null) {
                         JOptionPane.showMessageDialog(null, "Successfully logged in");
                     }
@@ -83,11 +84,16 @@ public class LoginPage extends JFrame {
         //Add a listening event for the user registration button
         Register.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
-                ResiterPage resiter = new ResiterPage();//registration window
+                RegisterPage resiter = new RegisterPage();//registration window
                 resiter.setVisible(true);
                 setVisible(false); //close the display window
             }
         });
 
+    }
+
+    public static User getUser(){
+
+        return user;
     }
 }

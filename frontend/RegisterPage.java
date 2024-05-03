@@ -1,4 +1,4 @@
-package Fronted;
+package frontend;
 
 import dto.User;
 import services.impl.UserImpl;
@@ -8,7 +8,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ResiterPage extends JFrame {
+public class RegisterPage extends JFrame {
     /*Registration interface properties*/
     JLabel firstNameLable = new JLabel("Firstname: ");
     JLabel lastNameLable = new JLabel("Lastname: ");
@@ -17,7 +17,7 @@ public class ResiterPage extends JFrame {
     JLabel passwordAaginLable = new JLabel("Confirm password: ");
 
 
-    //Input box
+    //logic.Input box
     JTextField firstName = new JTextField(10);
     JTextField lastName = new JTextField(10);
     JTextField userName = new JTextField(10);
@@ -29,7 +29,7 @@ public class ResiterPage extends JFrame {
     JButton registerOK = new JButton("Confirm");
     JButton cancel = new JButton("Clear");
 
-    public ResiterPage() {
+    public RegisterPage() {
         setFont(new Font("宋体", Font.BOLD, 16));
         /*Add properties and set window layout*/
         setTitle("Registration");

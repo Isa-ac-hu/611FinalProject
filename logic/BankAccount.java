@@ -1,3 +1,5 @@
+package logic;
+
 public abstract class BankAccount {
     BankAccTypes accountType;
     String accountName;

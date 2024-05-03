@@ -1,3 +1,5 @@
+package logic;
+
 import java.util.List;
 import java.util.Objects;
 import java.util.Scanner;
@@ -26,7 +28,7 @@ public class Input {
                 }
             }
             else{
-                System.out.println("Input is invalid. Please enter a number:");
+                System.out.println("logic.Input is invalid. Please enter a number:");
             }
         }
         return choice;
@@ -46,13 +48,30 @@ public class Input {
                 }
             }
             else{
-                    System.out.println("Input is invalid. Please enter a number:");
+                    System.out.println("logic.Input is invalid. Please enter a number:");
             }
 
         }
         return choice;
     }
 
+    public static boolean queryInt(String input, int min, int max) {
+        if (input == null) {
+            return false;
+        } else {
+            try {
+                double number = Double.parseDouble(input);
+                if (number >= min && number <= max) {
+                    return true;
+                } else {
+                    return false;
+                }
+            } catch (NumberFormatException var4) {
+
+                return false;
+            }
+        }
+    }
     public static String getStringInput(int inputLen, String prompt){
         System.out.println(prompt);
         String input = "";

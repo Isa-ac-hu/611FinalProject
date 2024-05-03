@@ -1,3 +1,10 @@
+package frontend;
+
+import dto.Customer;
+import logic.Collateral;
+import logic.Input;
+import logic.Loan;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -9,18 +16,18 @@ public class LoanCreationPage extends JFrame {
     private JTextField collateralAmountField;
 
     public LoanCreationPage() {
-        setTitle("Loan Creation Interface");
+        setTitle("logic.Loan Creation Interface");
         setSize(400, 200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        JLabel loanAmountLabel = new JLabel("Loan Amount:");
+        JLabel loanAmountLabel = new JLabel("logic.Loan Amount:");
         loanAmountField = new JTextField(10);
-        JLabel collateralNameLabel = new JLabel("Collateral Name:");
+        JLabel collateralNameLabel = new JLabel("logic.Collateral Name:");
         collateralNameField = new JTextField(10);
-        JLabel collateralAmountLabel = new JLabel("Collateral Amount:");
+        JLabel collateralAmountLabel = new JLabel("logic.Collateral Amount:");
         collateralAmountField = new JTextField(10);
-        JButton createLoanButton = new JButton("Create Loan");
+        JButton createLoanButton = new JButton("Create logic.Loan");
 
         createLoanButton.addActionListener(new CreateLoanAction());
 
@@ -70,18 +77,17 @@ public class LoanCreationPage extends JFrame {
                 double collateralAmount = Double.parseDouble(collateralAmountField.getText());
 
                 if(Input.queryInt(loanAmountField.getText(), 0,  Integer.MAX_VALUE) == false){
-                    JOptionPane.showMessageDialog(null, "Loan Amount exceeds valid range");
+                    JOptionPane.showMessageDialog(null, "logic.Loan Amount exceeds valid range");
                 }
                 else if(Input.queryInt(collateralAmountField.getText(), 0,  Integer.MAX_VALUE) == false){
-                    JOptionPane.showMessageDialog(null, "Collateral Amount exceeds valid range");
+                    JOptionPane.showMessageDialog(null, "logic.Collateral Amount exceeds valid range");
                 }
                 else if(loanAmount > collateralAmount){
                     JOptionPane.showMessageDialog(null, "Inadequate value for collateral");
                 }
                 else{
-                    Loan loan = new Loan(loanAmount, new Collateral(collateralName, collateralAmount), LoginPage.getCustomer());
-                    LoginPage.getCustomer().loans.add(loan);
-                    JOptionPane.showMessageDialog(null, "Loan created: " + loan);
+                    Loan loan = new Loan(loanAmount, new Collateral(collateralName, collateralAmount), (Customer)LoginPage.getUser());
+                    JOptionPane.showMessageDialog(null, "logic.Loan created: " + loan);
                 }
 
             } catch (NumberFormatException ex) {

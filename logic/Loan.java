@@ -1,6 +1,10 @@
+package logic;
+
+import dto.Customer;
+
 import java.time.LocalDate;
 
-public class Loan implements Observer{
+public class Loan implements Observer {
 
     private double initialLoanAmount;
     private double debtAmount;
@@ -21,7 +25,7 @@ public class Loan implements Observer{
 
     public void update() {
         // Calculate the number of days elapsed since the last update
-        LocalDate currentDate = Bank.getTime(); // Assuming Bank has a method to get the current time
+        LocalDate currentDate = Bank.getTime(); // Assuming logic.Bank has a method to get the current time
         long monthsElapsed = loanStartDate.until(currentDate).getMonths();
 
         // Calculate the interest amount to add
