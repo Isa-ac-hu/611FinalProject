@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ce50dedd-23de-4d8c-8af8-174d37c35a14" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/611FinalProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/611FinalProject.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bank.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fronted/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Fronted/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Observer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/.idea/611FinalProject.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/BankAccTypes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/BankAccount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/Fronted/LoginPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/Fronted/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/Input.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/Loan.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/Manager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/User.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2fwIF9aw9k33mUgwmYP4JwlYEoI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "Yuzhe",
+    "kotlin-language-version-configured": "true",
+    "settings.editor.selected.configurable": "vcs.Git"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Fronted.Main" />
+      <module name="611FinalProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Fronted.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-1.8.0_402-corretto-1.8.0_402-4caba194b151-ae57be32" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ce50dedd-23de-4d8c-8af8-174d37c35a14" name="Changes" comment="" />
+      <created>1714705607036</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1714705607036</updated>
+    </task>
+    <servers />
+  </component>
+</project>

@@ -1,50 +1,93 @@
+package Fronted;
+
+import dto.User;
+import services.impl.UserImpl;
+
 import javax.swing.*;
 import java.awt.*;
-import java.util.ArrayList;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class LoginPage extends JFrame {
-    private JLabel usernameLabel;
-    private JTextField usernameField;
-    private JLabel passwordLabel;
-    private JPasswordField passwordField;
-    private JButton loginButton;
+    /*Add properties to the window as follows：*/
+    JButton Login =      new JButton("Login");
+    JButton Cancel =     new JButton("Reset");
+    JButton Register =   new JButton("Regist");
+    JLabel usernameLable = new JLabel("Username：");
+    JLabel passwordLable = new JLabel("Password：");
+    JPasswordField password  = new JPasswordField(10);
+    JTextField username = new JTextField(10);
 
-    private String username;
-    private String password;
-
-    private static Customer customer = new Customer("Isaac", "Hu", "ken", "1234", new ArrayList<BankAccount>(), new ArrayList<Loan>());
-
-    public LoginPage() {
+    /*Methods are as follows：*/
+    public LoginPage(){
         setTitle("Login Page");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(300, 150);
-        setLayout(new GridLayout(3, 2));
+        //Set flow layout 1 or FlowLayout.CENTER, center alignment
 
-        usernameLabel = new JLabel("Username:");
-        usernameField = new JTextField();
-        passwordLabel = new JLabel("Password:");
-        passwordField = new JPasswordField();
-        loginButton = new JButton("Login");
+        //The first panel: fill in user data
+        JPanel Userdata = new JPanel();
+        Userdata.setLayout(new FlowLayout(FlowLayout.LEFT));
+        Userdata.add(usernameLable);
+        Userdata.add(username);
+        Userdata.add(passwordLable);
+        Userdata.add(password);
+        add(Userdata); //Add the first panel to the user interface
 
-        add(usernameLabel);
-        add(usernameField);
-        add(passwordLabel);
-        add(passwordField);
-        add(new JLabel());
-        add(loginButton);
+        //Second panel: button component
+        JPanel BuJp = new JPanel();
+        BuJp.setLayout(new GridLayout(3,1,5,5));
+        BuJp.add(Login);
+        BuJp.add(Cancel);
+        BuJp.add(Register);  //registration
+        add(BuJp); //Add the second panel to the user interface
 
-        loginButton.addActionListener(e -> {
-            username = usernameField.getText();
-            password = new String(passwordField.getPassword());
-            // You can perform further actions with username and password here
-            System.out.println("Username: " + username);
-            System.out.println("Password: " + password);
+        setLayout(new FlowLayout());
+        setSize(450,250);
+        setResizable(false);   //Set non-stretchable size
+        setLocationRelativeTo(null);//Center the window
+        setVisible(true); //Open display window
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//Set the exiting action
+
+        //Add a listener event for the login button
+        Login.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent arg0) {
+                if (username.getText().trim().length() == 0 || new String(password.getPassword()).trim().length() == 0) {
+                    JOptionPane.showMessageDialog(null, "Username and password are not allowed to be empty");
+                    return;
+                }
+
+                try{
+                    String myusername = username.getText().trim();
+                    String mypassword = new String(password.getPassword()).trim();
+                    UserImpl userImpl=new UserImpl();
+                    User user=userImpl.login(myusername, mypassword);
+                    if(user!=null) {
+                        JOptionPane.showMessageDialog(null, "Successfully logged in");
+                    }
+                    else JOptionPane.showMessageDialog(null, "Username or password is incorrect");
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+
+            }
         });
 
-        setVisible(true);
-    }
+        //Add a listener event for the re-enter button
+        Cancel.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent arg0) {
+                username.setText("");
+                password.setText("");
 
-    public static Customer getCustomer() {
-        return customer;
+            }
+        });
+
+        //Add a listening event for the user registration button
+        Register.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent arg0) {
+                ResiterPage resiter = new ResiterPage();//registration window
+                resiter.setVisible(true);
+                setVisible(false); //close the display window
+            }
+        });
+
     }
 }
