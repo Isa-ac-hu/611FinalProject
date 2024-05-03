@@ -53,25 +53,6 @@ public class Input {
         return choice;
     }
 
-    public static boolean queryInt(String input, int min, int max) {
-        if (input == null) {
-            return false;
-        } else {
-            try {
-                double number = Double.parseDouble(input);
-                if (number >= min && number <= max) {
-                    return true;
-                } else {
-                    return false;
-                }
-            } catch (NumberFormatException var4) {
-
-                return false;
-            }
-        }
-    }
-
-
     public static String getStringInput(int inputLen, String prompt){
         System.out.println(prompt);
         String input = "";
