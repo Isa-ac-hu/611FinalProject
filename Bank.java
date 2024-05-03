@@ -3,12 +3,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Bank {
-    private LocalDate time;
+    private static LocalDate time;
     private List<Observer> observers = new ArrayList<>();
 
     public void setTime(LocalDate time) {
         this.time = time; // set new time
         notifyAllObservers(); // notify all observers about the time change
+    }
+
+    public static LocalDate getTime() {
+        return time;
     }
 
     public void attachObserver(Observer observer) {

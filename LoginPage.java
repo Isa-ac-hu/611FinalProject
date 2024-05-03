@@ -1,6 +1,6 @@
-package Fronted;
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class LoginPage extends JFrame {
     private JLabel usernameLabel;
@@ -11,6 +11,8 @@ public class LoginPage extends JFrame {
 
     private String username;
     private String password;
+
+    private static Customer customer = new Customer("Isaac", "Hu", "ken", "1234", new ArrayList<BankAccount>(), new ArrayList<Loan>());
 
     public LoginPage() {
         setTitle("Login Page");
@@ -42,4 +44,7 @@ public class LoginPage extends JFrame {
         setVisible(true);
     }
 
+    public static Customer getCustomer() {
+        return customer;
+    }
 }
