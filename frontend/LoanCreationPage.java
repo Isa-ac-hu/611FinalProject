@@ -86,7 +86,7 @@ public class LoanCreationPage extends JFrame {
                     JOptionPane.showMessageDialog(null, "Inadequate value for collateral");
                 }
                 else{
-                    Loan loan = new Loan(loanAmount, new Collateral(collateralName, collateralAmount), (Customer)LoginPage.getUser());
+                    Loan loan = new Loan(loanAmount, new Collateral(collateralName, collateralAmount), (Customer)LoginPage.user);
                     JOptionPane.showMessageDialog(null, "logic.Loan created: " + loan);
                 }
 

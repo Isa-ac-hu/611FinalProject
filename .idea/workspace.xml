@@ -6,15 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="ce50dedd-23de-4d8c-8af8-174d37c35a14" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/user.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/user.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dto/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/dto/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/LoanCreationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/LoanCreationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/BankAccount.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/data/user.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/data/user.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/dto/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/dto/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/dto/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/dto/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/LoanCreationPage$CreateLoanAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/frontend/LoanCreationPage$CreateLoanAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/LoginPage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/frontend/LoginPage$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/LoginPage$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/frontend/LoginPage$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/LoginPage$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/frontend/LoginPage$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/frontend/LoginPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/logic/BankAccount.class" beforeDir="false" />
     </list>
-    <list id="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" name="Changes by isaac" comment="">
-      <change beforePath="$PROJECT_DIR$/dto/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/dto/User.java" afterDir="false" />
-    </list>
+    <list id="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" name="Changes by isaac" comment="" />
     <list id="9f77dce7-d952-4601-8721-d33df14a1075" name="Changes by jiang" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +102,8 @@
       <workItem from="1714767223533" duration="3796000" />
       <workItem from="1714804436143" duration="49000" />
       <workItem from="1714804999133" duration="1215000" />
+      <workItem from="1714822276440" duration="6372000" />
+      <workItem from="1714834896980" duration="551000" />
     </task>
     <servers />
   </component>

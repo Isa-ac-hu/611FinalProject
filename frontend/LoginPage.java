@@ -9,7 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 public class LoginPage extends JFrame {
 
-    private static User user;
+    public static User user;
     /*Add properties to the window as follows：*/
     JButton Login =      new JButton("Login");
     JButton Cancel =     new JButton("Reset");
@@ -62,7 +62,11 @@ public class LoginPage extends JFrame {
                     UserImpl userImpl=new UserImpl();
                     user=userImpl.login(myusername, mypassword);
                     if(user!=null) {
-                        JOptionPane.showMessageDialog(null, "Successfully logged in");
+
+                        //JOptionPane.showMessageDialog(null, "Successfully logged in");
+                        CustomerPage customerPage = new CustomerPage();//registration window
+                        customerPage.setVisible(true);
+                        setVisible(false); //close the display window
                     }
                     else JOptionPane.showMessageDialog(null, "Username or password is incorrect");
                 }catch (Exception e){
@@ -90,10 +94,5 @@ public class LoginPage extends JFrame {
             }
         });
 
-    }
-
-    public static User getUser(){
-
-        return user;
     }
 }
