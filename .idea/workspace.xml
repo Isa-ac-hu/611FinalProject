@@ -5,39 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce50dedd-23de-4d8c-8af8-174d37c35a14" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logic/Observer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/logic/Bank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BankAccTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/logic/BankAccTypes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/logic/BankAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collateral.java" beforeDir="false" afterPath="$PROJECT_DIR$/logic/Collateral.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fronted/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fronted/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fronted/ResiterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/RegisterPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/logic/Input.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Loan.java" beforeDir="false" afterPath="$PROJECT_DIR$/logic/Loan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LoanCreationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/LoanCreationPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/user.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/user.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dto/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/dto/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/BankAccTypes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/BankAccount.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/Fronted/LoginPage$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/Fronted/LoginPage$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/Fronted/LoginPage$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/Fronted/LoginPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/Fronted/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/Fronted/ResiterPage$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/Fronted/ResiterPage$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/Fronted/ResiterPage$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/Fronted/ResiterPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/Input.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/Loan.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/data/user.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/data/user.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/dto/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/dto/Customer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/dto/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/dto/User.class" afterDir="false" />
     </list>
     <list id="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" name="Changes by isaac" comment="">
-      <change beforePath="$PROJECT_DIR$/Fronted/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dto/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/dto/User.java" afterDir="false" />
     </list>
     <list id="9f77dce7-d952-4601-8721-d33df14a1075" name="Changes by jiang" comment="" />
@@ -57,18 +32,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/frontend/LoginPage.java">
-      <ranges>
-        <range start1="0" end1="1" start2="0" end2="1" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
-        <range start1="9" end1="10" start2="9" end2="9" changelist="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" />
-        <range start1="11" end1="11" start2="10" end2="12" changelist="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" />
-        <range start1="61" end1="62" start2="62" end2="63" changelist="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" />
-        <range start1="85" end1="86" start2="86" end2="87" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
-        <range start1="92" end1="92" start2="93" end2="98" changelist="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" />
-      </ranges>
-    </file>
-  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 2
@@ -78,23 +41,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Debug",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "vcs.Git",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="frontend.Main" />
@@ -118,7 +81,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-1.8.0_402-corretto-1.8.0_402-4caba194b151-995e55e7" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
       </set>
     </attachedChunks>
   </component>
@@ -131,6 +95,8 @@
       <option name="presentableId" value="Default" />
       <updated>1714705607036</updated>
       <workItem from="1714767223533" duration="3796000" />
+      <workItem from="1714804436143" duration="49000" />
+      <workItem from="1714804999133" duration="1215000" />
     </task>
     <servers />
   </component>
@@ -140,11 +106,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/dto/Customer.java</url>
-          <line>10</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/services/impl/UserImpl.java</url>
           <line>28</line>

@@ -8,7 +8,7 @@ public class Customer extends User implements Observer {
     ArrayList<Loan> loans;
 
     public Customer(int ID, String firstName, String lastName, String userName, String password, ArrayList<BankAccount> accounts, ArrayList<Loan> loans){
-        super(ID, "C" ,firstName, lastName, userName, password);
+        super(1, "C" ,firstName, lastName, userName, password);
         this.accounts = accounts;
         this.loans = loans;
     }

@@ -5,19 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce50dedd-23de-4d8c-8af8-174d37c35a14" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/logic/Bank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BankAccTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/logic/BankAccTypes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/logic/BankAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collateral.java" beforeDir="false" afterPath="$PROJECT_DIR$/logic/Collateral.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fronted/ResiterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Fronted/ResiterPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/logic/Input.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Loan.java" beforeDir="false" afterPath="$PROJECT_DIR$/logic/Loan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LoanCreationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/logic/LoanCreationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/user.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/user.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dto/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/dto/Customer.java" afterDir="false" />
     </list>
     <list id="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" name="Changes by isaac" comment="">
-      <change beforePath="$PROJECT_DIR$/LoanCreationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/logic/LoanCreationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dto/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/dto/User.java" afterDir="false" />
     </list>
     <list id="9f77dce7-d952-4601-8721-d33df14a1075" name="Changes by jiang" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,22 +28,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/logic/LoanCreationPage.java">
-      <ranges>
-        <range start1="0" end1="0" start2="0" end2="2" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
-        <range start1="4" end1="4" start2="6" end2="9" changelist="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" />
-        <range start1="11" end1="12" start2="16" end2="17" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
-        <range start1="16" end1="17" start2="21" end2="22" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
-        <range start1="18" end1="19" start2="23" end2="24" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
-        <range start1="20" end1="21" start2="25" end2="26" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
-        <range start1="22" end1="23" start2="27" end2="28" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
-        <range start1="72" end1="73" start2="77" end2="78" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
-        <range start1="75" end1="76" start2="80" end2="81" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
-        <range start1="83" end1="84" start2="88" end2="89" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
-      </ranges>
-    </file>
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -80,11 +57,11 @@
 }]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Fronted.Main" />
+      <option name="MAIN_CLASS_NAME" value="frontend.Main" />
       <module name="611FinalProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Fronted.*" />
+          <option name="PATTERN" value="frontend.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -101,7 +78,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-1.8.0_402-corretto-1.8.0_402-4caba194b151-995e55e7" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
       </set>
     </attachedChunks>
   </component>
@@ -113,11 +91,27 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1714705607036</updated>
-      <workItem from="1714767223533" duration="1091000" />
+      <workItem from="1714767223533" duration="3796000" />
+      <workItem from="1714804436143" duration="49000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/services/impl/UserImpl.java</url>
+          <line>28</line>
+          <properties class="services.impl.UserImpl" method="addUser">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

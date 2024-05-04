@@ -11,23 +11,22 @@ public class User {
     String userName;
     @JsonProperty("password")
     String password;
-//    @JsonProperty("ID")
-
-    int ID;
+    @JsonProperty("id")
+    Integer id;
     @JsonProperty("role")
     String role;
+
     public User(){
 
     }
 
-    public User(int ID, String role, String _firstName, String _lastName, String _username, String _password){
+    public User(Integer _id, String _role, String _firstName, String _lastName, String _username, String _password){
         firstName=_firstName;
         lastName=_lastName;
         userName=_username;
         password=_password;
-        //this.ID = ID;
-        ID = 5;
-        this.role = role;
+        id = _id;
+        role = _role;
     }
 
     public String getFirstName(){
@@ -62,10 +61,20 @@ public class User {
         this.password=_password;
     }
 
-    public int getID(){
-        return ID;
+    public Integer getID() {
+        return id;
     }
+
+    public void setID(Integer _id){
+        this.id=_id;
+    }
+
     public String getRole(){
         return role;
     }
+
+    public void setRole(String _role){
+        this.role=_role;
+    }
+    
 }
