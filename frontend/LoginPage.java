@@ -13,7 +13,7 @@ public class LoginPage extends JFrame {
     /*Add properties to the window as follows：*/
     JButton Login =      new JButton("Login");
     JButton Cancel =     new JButton("Reset");
-    JButton Register =   new JButton("Regist");
+    JButton Register =   new JButton("Register");
     JLabel usernameLable = new JLabel("Username：");
     JLabel passwordLable = new JLabel("Password：");
     JPasswordField password  = new JPasswordField(10);

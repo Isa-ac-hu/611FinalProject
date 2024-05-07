@@ -8,66 +8,71 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 import java.util.Vector;
 import java.util.regex.Pattern;
 
-public class AccountPage extends JFrame {
+public class TransferPage extends JFrame {
+    DefaultComboBoxModel<BankAccount> model=null;
     BankAccTypes type=BankAccTypes.CHECKING;
     /*Registration interface properties*/
     JLabel lblAccountTypeTitle = new JLabel("Account type: ");
-    JLabel lblAccountType = new JLabel("");
+    String[] str = {"CHECKING","SAVINGS","SECURITY"};
+    JComboBox cbType = new JComboBox(str);
     JLabel lblAccountNameTitle = new JLabel("Account name: ");
-    JTextField txtAccountName=new JTextField(20);
-    JLabel lblDepositTitle = new JLabel("Deposit amount: ");
-    JTextField txtDeposit=new JTextField(20);
-    JLabel lblPrompt = new JLabel("Charge $50 handling fees");
     JComboBox<BankAccount> cbAcount=new JComboBox<>();
+    JRadioButton JR1 =new JRadioButton("Deposit");//
+    JRadioButton JR2 =new JRadioButton("Withdraw");//
+    ButtonGroup BG=new ButtonGroup(); //创建按钮组
+    JLabel lblDepositTitle = new JLabel("Amount: ");
+    JTextField txtDeposit=new JTextField(20);
+    JLabel lblPrompt = new JLabel("Withdrawal fee $10 (except Security)");
+
 
     //Buttons
     JButton btnReturn = new JButton("Return");
     JButton btnOK = new JButton("Confirm");
     JButton btnClear = new JButton("Clear");
 
-    public AccountPage(BankAccTypes _type) {
-        type=_type;
+    public TransferPage() {
         setFont(new Font("宋体", Font.BOLD, 16));
         /*Add properties and set window layout*/
-        setTitle("New Account");
+        setTitle("Transfer Page");
         setDefaultCloseOperation(EXIT_ON_CLOSE);//Set off exit function
 //
         //First panel: username and password input
         JPanel UserdataJP = new JPanel();
         UserdataJP.setLayout(new GridLayout(3,2,3,3));
         UserdataJP.add(lblAccountTypeTitle);
-        String valueType="";
-        if(type==BankAccTypes.CHECKING)
-            lblAccountType.setText("Checking");
-        else if(type==BankAccTypes.SAVINGS)
-            lblAccountType.setText("Saving");
-        else if(type==BankAccTypes.SECURITY){
-            lblAccountType.setText("Security");
-        }
-        UserdataJP.add(lblAccountType);
+        UserdataJP.add(cbType);
         UserdataJP.add(lblAccountNameTitle);
-        if(type==BankAccTypes.SECURITY){
-            try{
-                InitCB();
-            }catch (Exception e){
-
-            }
-
+        try{
+            InitCB();
             UserdataJP.add(cbAcount);
-        }
+        }catch (Exception e){
 
-        else
-            UserdataJP.add(txtAccountName);
+        }
         UserdataJP.add(lblDepositTitle);
         UserdataJP.add(txtDeposit);
-
+        //BG.add(JR1);
+        //BG.add(JR2);
+        //UserdataJP.add(JR1);
+        //UserdataJP.add(JR2);
         add(UserdataJP);
+
+        JPanel jpOp = new JPanel();
+        jpOp.setLayout(new FlowLayout(FlowLayout.CENTER));
+        jpOp.setPreferredSize(new Dimension(600, 50));
+        BG.add(JR1);
+        BG.add(JR2);
+        jpOp.add(JR1);
+        jpOp.add(JR2);
+        //jpOp.add(BG);
+        add(jpOp);
 
         if(type==BankAccTypes.SECURITY){
             lblPrompt.setText("The selected account balance must be at least $5000");
@@ -75,7 +80,7 @@ public class AccountPage extends JFrame {
         }
         JPanel jpPrompt = new JPanel();
         jpPrompt.setLayout(new FlowLayout(FlowLayout.CENTER));
-        jpPrompt.setPreferredSize(new Dimension(400, 50));
+        jpPrompt.setPreferredSize(new Dimension(600, 50));
         lblPrompt.setForeground(Color.red);
         jpPrompt.add(lblPrompt);
         add(jpPrompt);
@@ -95,6 +100,42 @@ public class AccountPage extends JFrame {
         setVisible(true);
         setLocationRelativeTo(null);//Center the window
 
+        cbType.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+                if (e.getStateChange() == ItemEvent.SELECTED) {
+                    // 处理选项变化的代码
+                    //System.out.println("Selected item: " + e.getItem());
+                    try{
+                        cbAcount.removeAllItems();
+                        BankAccountImpl bankAccount=new BankAccountImpl();
+                        BankAccTypes types=BankAccTypes.CHECKING;
+                        String typeSel=(String)cbType.getSelectedItem();
+                        if(typeSel.equals("CHECKING"))
+                            types=BankAccTypes.CHECKING;
+                        else if(typeSel.equals("SAVINGS"))
+                            types=BankAccTypes.SAVINGS;
+                        else if(typeSel.equals("SECURITY"))
+                            types=BankAccTypes.SECURITY;
+
+                        List<BankAccount> bankAccountList=bankAccount.getBankAccountList(LoginPage.user.getUserName(), types);
+
+                        // 使用DefaultComboBoxModel添加实体对象
+                        Vector<BankAccount> persons = new Vector<>();
+                        if(bankAccountList!=null){
+                            for(BankAccount account:bankAccountList){
+                                persons.add(account);
+                                cbAcount.addItem(account);
+                            }
+                        }
+                        model = new DefaultComboBoxModel<>(persons);
+                    }catch (Exception ex){
+
+                    }
+                }
+            }
+        });
+
         /*Return to login page button*/
         btnReturn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
@@ -107,7 +148,6 @@ public class AccountPage extends JFrame {
         /*Re-enter button*/
         btnClear.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
-                txtAccountName.setText("");
                 txtDeposit.setText("");
             }
         });
@@ -119,26 +159,26 @@ public class AccountPage extends JFrame {
                     JOptionPane.showMessageDialog(null,"Please enter an integer");
                     return;
                 }
-                /*Determine whether the username and password are empty*/
-                BankAccount bankAccount=new BankAccount();
-                bankAccount.setUserName(LoginPage.user.getUserName());
-                bankAccount.setAccountType(type);
-                if(type==BankAccTypes.SECURITY){
-                    BankAccount bankAccountSel=(BankAccount)cbAcount.getSelectedItem();
-                    bankAccount.setAccountName(bankAccountSel.getAccountName());
-                }
-                else
-                    bankAccount.setAccountName(txtAccountName.getText());
-                bankAccount.setBalance(Integer.valueOf(txtDeposit.getText()));
                 BankAccountImpl ba=new BankAccountImpl();
                 Map<String, Object> mp=null;
                 try {
-                    //先判断是否重复
-                    if(ba.isRepeat(bankAccount.getAccountName(), bankAccount.getAccountType())>0){
-                        JOptionPane.showMessageDialog(null,"Duplicate account, creation is not allowed");
-                        return;
+                    int opType=0;
+                    if(JR1.isSelected()){
+                        opType=1;
                     }
-                    mp=ba.addBankAccount(bankAccount);
+                    else if(JR2.isSelected()){
+                        opType=2;
+                    }
+                    BankAccTypes types=BankAccTypes.CHECKING;
+                    String typeSel=(String)cbType.getSelectedItem();
+                    if(typeSel.equals("CHECKING"))
+                        types=BankAccTypes.CHECKING;
+                    else if(typeSel.equals("SAVINGS"))
+                        types=BankAccTypes.SAVINGS;
+                    else if(typeSel.equals("SECURITY"))
+                        types=BankAccTypes.SECURITY;
+                    BankAccount bankAccountSel=(BankAccount)cbAcount.getSelectedItem();
+                    mp=ba.saveTransfer(LoginPage.user.getUserName(),bankAccountSel.getAccountName(),types,opType,Integer.valueOf(txtDeposit.getText()));
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
@@ -157,7 +197,16 @@ public class AccountPage extends JFrame {
 
     private void InitCB() throws IOException {
         BankAccountImpl bankAccount=new BankAccountImpl();
-        List<BankAccount> bankAccountList=bankAccount.getBankAccountListBySecurity(LoginPage.user.getUserName(), BankAccTypes.SECURITY,5000);
+        BankAccTypes types=BankAccTypes.CHECKING;
+        String typeSel=(String)cbType.getSelectedItem();
+        if(typeSel.equals("CHECKING"))
+            types=BankAccTypes.CHECKING;
+        else if(typeSel.equals("SAVINGS"))
+            types=BankAccTypes.SAVINGS;
+        else if(typeSel.equals("SECURITY"))
+            types=BankAccTypes.SECURITY;
+
+        List<BankAccount> bankAccountList=bankAccount.getBankAccountList(LoginPage.user.getUserName(), types);
 
         // 使用DefaultComboBoxModel添加实体对象
         Vector<BankAccount> persons = new Vector<>();
@@ -167,7 +216,7 @@ public class AccountPage extends JFrame {
 
             }
         }
-        DefaultComboBoxModel<BankAccount> model = new DefaultComboBoxModel<>(persons);;
+        model = new DefaultComboBoxModel<>(persons);
 
         cbAcount = new JComboBox<>(model);
 

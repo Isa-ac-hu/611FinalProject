@@ -13,7 +13,7 @@ import java.util.List;
 
 public class CustomerPage extends JFrame{
     /*Registration interface properties*/
-    JButton btnTransfer = new JButton("Transfer");
+    JButton btnTransfer = new JButton("Deposit & Withdraw");
     JButton btnStock = new JButton("Stock");
     JButton btnLoan = new JButton("Loan");
     JButton btnLogout = new JButton("Logout");
@@ -21,11 +21,11 @@ public class CustomerPage extends JFrame{
     JLabel lblUserTitle=new JLabel("Username:");
     JLabel lblUserName=new JLabel("");
     JLabel lblTitle1=new JLabel("Checking");
-    JButton btnChecking=new JButton("Create");
+    JButton btnChecking=new JButton("Add");
     JLabel lblTitle2=new JLabel("Saving");
-    JButton btnSaving=new JButton("Create");
+    JButton btnSaving=new JButton("Add");
     JLabel lblTitle3=new JLabel("Security");
-    JButton btnSecurity=new JButton("Create");
+    JButton btnSecurity=new JButton("Add");
     JList<BankAccount> listChecking=new JList();
     JList<BankAccount> listSaving=new JList();
     JList<BankAccount> listSecurity=new JList();
@@ -36,7 +36,7 @@ public class CustomerPage extends JFrame{
     public CustomerPage() {
         setFont(new Font("宋体", Font.BOLD, 16));
         /*Add properties and set window layout*/
-        setTitle("test");
+        setTitle("Customer Page");
         setDefaultCloseOperation(EXIT_ON_CLOSE);//Set off exit function
 //
         //First panel: username and password input
@@ -153,6 +153,23 @@ public class CustomerPage extends JFrame{
             }
         });
 
+        btnTransfer.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent arg0) {
+                TransferPage transferPage = new TransferPage();//Registration window
+                transferPage.setVisible(true);
+                setVisible(false); //Close display window
+            }
+        });
+
+        btnLogout.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent arg0) {
+                LoginPage loginPage = new LoginPage();//Registration window
+                loginPage.setVisible(true);
+                LoginPage.user=null;
+                setVisible(false); //Close display window
+            }
+        });
+
         Init();
     }
 
@@ -162,6 +179,7 @@ public class CustomerPage extends JFrame{
 
     private void InitChecking() throws IOException {
         listChecking = new JList<>(model);
+
         BankAccountImpl bankAccount=new BankAccountImpl();
         List<BankAccount> bankAccountList=bankAccount.getBankAccountList(LoginPage.user.getUserName(), BankAccTypes.CHECKING);
         if(bankAccountList!=null){
@@ -200,7 +218,7 @@ public class CustomerPage extends JFrame{
         @Override
         public Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
             BankAccount person = (BankAccount) value;
-            String text = "Account name: "+person.getAccountName()+"\n  Balance: "+String.valueOf(person.getBalance());
+            String text = "Account name: "+person.getAccountName()+"\n    Balance: "+String.valueOf(person.getBalance());
             return super.getListCellRendererComponent(list, text, index, isSelected, cellHasFocus);
         }
     }
