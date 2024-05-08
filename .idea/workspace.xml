@@ -5,122 +5,66 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce50dedd-23de-4d8c-8af8-174d37c35a14" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ATM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bank.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BankAccCreationPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BankAccTypes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BankAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CheckingAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Collateral.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CustomerStockMarketPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DepositWithdrawPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Input.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Loan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoanCreationPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoanPaymentPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Manager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Observer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RegisterPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SavingsAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecurityAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Stock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Subject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/account.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/user.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dto/BankAccount.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dto/Customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dto/Manager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dto/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/AccountPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/CustomerPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/LoanCreationPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/LoginPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/RegisterPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/TransferPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/fastjson-1.2.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/jackson-annotations-2.14.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/jackson-core-2.14.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/jackson-databind-2.14.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/jackson-module-parameter-names-2.9.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logic/Bank.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logic/BankAccTypes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logic/Collateral.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logic/Input.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logic/Loan.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logic/Observer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/.idea/libraries/lib.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/611FinalProject.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/data/account.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/data/user.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/dto/BankAccount.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/dto/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/dto/Manager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/dto/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/AccountPage$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/AccountPage$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/AccountPage$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/AccountPage$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/AccountPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/CustomerPage$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/CustomerPage$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/CustomerPage$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/CustomerPage$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/CustomerPage$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/CustomerPage$BankAccountListRenderer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/CustomerPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/LoanCreationPage$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/LoanCreationPage$CreateLoanAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/LoanCreationPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/LoginPage$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/LoginPage$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/LoginPage$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/LoginPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/RegisterPage$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/RegisterPage$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/RegisterPage$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/RegisterPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/TransferPage$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/TransferPage$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/TransferPage$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/TransferPage$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/TransferPage$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/TransferPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/lib/fastjson-1.2.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/lib/jackson-annotations-2.14.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/lib/jackson-core-2.14.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/lib/jackson-databind-2.14.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/lib/jackson-module-parameter-names-2.9.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/logic/Bank.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/logic/BankAccTypes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/logic/Collateral.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/logic/Input.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/logic/Loan.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/logic/Observer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/services/impl/BankAccountImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/services/impl/UserImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/services/intf/IBankAccountIntf.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/services/intf/IUserIntf.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/impl/BankAccountImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/impl/UserImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/intf/IBankAccountIntf.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/intf/IUserIntf.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/CurrencyConversionStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Time.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UsdToEurConversion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UsdToJpyConversion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATM.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Accounts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Accounts.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BankAccCreationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/BankAccCreationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/BankAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerStockMarketPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerStockMarketPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DepositWithdrawPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/DepositWithdrawPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Loan.java" beforeDir="false" afterPath="$PROJECT_DIR$/Loan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoanCreationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/LoanCreationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Loans.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Loans.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RegisterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/RegisterPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecAcct.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SecAcct.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stocks.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Stocks.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trade.java" beforeDir="false" afterPath="$PROJECT_DIR$/Trade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trades.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Trades.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Users.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/ATM.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/ATM.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/Accounts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/Accounts.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/Bank.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/Bank.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/BankAccCreationPage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/BankAccCreationPage$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/BankAccCreationPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/BankAccCreationPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/BankAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/BankAccount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/CustomerStockMarketPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/CustomerStockMarketPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/DepositWithdrawPage$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/DepositWithdrawPage$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/DepositWithdrawPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/DepositWithdrawPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/HomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/HomePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/Loan.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/Loan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/LoanCreationPage$CreateLoanAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/LoanCreationPage$CreateLoanAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/Loans.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/Loans.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/LoginPage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/LoginPage$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/LoginPage$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/LoginPage$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/LoginPage$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/LoginPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/RegisterPage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/RegisterPage$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/RegisterPage$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/RegisterPage$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/RegisterPage$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/RegisterPage$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/RegisterPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/RegisterPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/SecAcct.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/SecAcct.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/Stocks.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/Stocks.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/Trade.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/Trade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/Users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/Users.txt" afterDir="false" />
     </list>
-    <list id="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" name="Changes by isaac" comment="" />
+    <list id="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" name="Changes by isaac" comment="">
+      <change beforePath="$PROJECT_DIR$/ATM.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BankAccCreationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/BankAccCreationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerStockMarketPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerStockMarketPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RegisterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/RegisterPage.java" afterDir="false" />
+    </list>
     <list id="9f77dce7-d952-4601-8721-d33df14a1075" name="Changes by jiang" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,6 +82,112 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/HomePage.java">
+      <ranges>
+        <range start1="3" end1="3" start2="3" end2="4" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="14" end1="15" start2="15" end2="16" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="17" end1="18" start2="18" end2="19" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="23" end1="25" start2="24" end2="24" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="33" end1="33" start2="32" end2="33" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="79" end1="79" start2="79" end2="80" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="80" end1="80" start2="81" end2="82" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="130" end1="131" start2="132" end2="133" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="231" end1="231" start2="233" end2="234" changelist="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" />
+        <range start1="312" end1="312" start2="315" end2="316" changelist="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" />
+        <range start1="363" end1="363" start2="367" end2="380" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="383" end1="384" start2="400" end2="400" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="387" end1="388" start2="403" end2="404" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="389" end1="391" start2="405" end2="410" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="443" end1="445" start2="462" end2="463" changelist="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" />
+        <range start1="452" end1="452" start2="470" end2="500" changelist="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" />
+        <range start1="480" end1="480" start2="528" end2="538" changelist="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" />
+        <range start1="481" end1="481" start2="539" end2="551" changelist="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/Bank.java">
+      <ranges>
+        <range start1="6" end1="7" start2="6" end2="7" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="10" end1="11" start2="10" end2="11" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="14" end1="15" start2="14" end2="15" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="16" end1="18" start2="16" end2="16" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="24" end1="26" start2="22" end2="28" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="27" end1="35" start2="29" end2="30" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="74" end1="75" start2="69" end2="70" changelist="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" />
+        <range start1="94" end1="97" start2="89" end2="89" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="101" end1="101" start2="93" end2="112" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/RegisterPage.java">
+      <ranges>
+        <range start1="7" end1="7" start2="7" end2="8" changelist="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" />
+        <range start1="111" end1="111" start2="112" end2="114" changelist="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" />
+        <range start1="119" end1="119" start2="122" end2="125" changelist="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" />
+        <range start1="120" end1="121" start2="126" end2="127" changelist="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" />
+        <range start1="123" end1="124" start2="129" end2="130" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="128" end1="128" start2="134" end2="139" changelist="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/LoginPage.java">
+      <ranges>
+        <range start1="27" end1="28" start2="27" end2="27" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="33" end1="33" start2="32" end2="46" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="44" end1="44" start2="57" end2="58" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="59" end1="60" start2="73" end2="73" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="114" end1="123" start2="127" end2="127" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="155" end1="156" start2="159" end2="160" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="186" end1="187" start2="190" end2="193" changelist="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" />
+        <range start1="337" end1="338" start2="343" end2="344" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/CustomerStockMarketPage.java">
+      <ranges>
+        <range start1="4" end1="4" start2="4" end2="6" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="9" end1="10" start2="11" end2="11" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="79" end1="82" start2="80" end2="81" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="84" end1="84" start2="83" end2="84" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="86" end1="87" start2="86" end2="87" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="124" end1="124" start2="124" end2="125" changelist="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" />
+        <range start1="162" end1="162" start2="163" end2="164" changelist="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" />
+        <range start1="207" end1="207" start2="209" end2="211" changelist="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" />
+        <range start1="236" end1="237" start2="240" end2="241" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="238" end1="238" start2="242" end2="247" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="240" end1="241" start2="249" end2="249" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="243" end1="243" start2="251" end2="253" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="255" end1="255" start2="265" end2="308" changelist="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/ATM.java">
+      <ranges>
+        <range start1="59" end1="59" start2="59" end2="60" changelist="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" />
+        <range start1="68" end1="70" start2="69" end2="69" changelist="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" />
+        <range start1="90" end1="91" start2="89" end2="90" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="93" end1="94" start2="92" end2="93" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="107" end1="108" start2="106" end2="107" changelist="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" />
+        <range start1="118" end1="119" start2="117" end2="118" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="138" end1="139" start2="137" end2="138" changelist="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" />
+        <range start1="150" end1="151" start2="149" end2="150" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="165" end1="166" start2="164" end2="165" changelist="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" />
+        <range start1="177" end1="178" start2="176" end2="177" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="189" end1="190" start2="188" end2="189" changelist="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" />
+        <range start1="200" end1="201" start2="199" end2="200" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="211" end1="212" start2="210" end2="211" changelist="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" />
+        <range start1="222" end1="223" start2="221" end2="222" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="237" end1="238" start2="236" end2="237" changelist="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/BankAccCreationPage.java">
+      <ranges>
+        <range start1="3" end1="3" start2="3" end2="5" changelist="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" />
+        <range start1="69" end1="69" start2="71" end2="74" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="74" end1="75" start2="79" end2="80" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="77" end1="78" start2="82" end2="83" changelist="ce50dedd-23de-4d8c-8af8-174d37c35a14" />
+        <range start1="82" end1="83" start2="87" end2="89" changelist="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" />
+        <range start1="92" end1="92" start2="98" end2="124" changelist="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" />
+        <range start1="109" end1="110" start2="141" end2="141" changelist="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" />
+      </ranges>
+    </file>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 2
@@ -147,23 +197,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main (1).executor": "Run",
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.Main (1)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -215,7 +266,7 @@
       <workItem from="1715000384357" duration="2121000" />
       <workItem from="1715083885162" duration="2718000" />
       <workItem from="1715086710660" duration="3020000" />
-      <workItem from="1715180980872" duration="749000" />
+      <workItem from="1715180980872" duration="14886000" />
     </task>
     <servers />
   </component>
@@ -228,11 +279,36 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/services/impl/UserImpl.java</url>
           <line>28</line>
-          <properties class="services.impl.UserImpl" method="addUser">
+          <properties class="services.impl.UserImpl">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BankAccCreationPage.java</url>
+          <line>87</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BankAccCreationPage.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BankAccCreationPage.java</url>
+          <line>100</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/CustomerStockMarketPage.java</url>
+          <line>126</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/HomePage.java</url>
+          <line>405</line>
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

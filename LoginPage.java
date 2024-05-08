@@ -25,12 +25,25 @@ public class LoginPage extends JFrame {
     static ArrayList<Loan> loans = new ArrayList<>();
     /*Add properties to the window as follows：*/
     JButton Login = new JButton("Login");
-    JButton Cancel = new JButton("Reset");
     JButton Register = new JButton("Register");
     JLabel usernameLable = new JLabel("Username：");
     JLabel passwordLable = new JLabel("Password：");
     JPasswordField password = new JPasswordField(10);
     JTextField username = new JTextField(10);
+
+    private Integer loadTime(){
+        String filePath = "/Users/abdelazimlokma/Desktop/Desktop/Uni/Spring 24/CS 611 OOP/Final Project/repo/Untitled/Time.txt";
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+            String line = reader.readLine();
+            if (line != null) {
+                return Integer.parseInt(line.trim()); // Convert the string to a double
+            } else {
+                throw new IOException("The file is empty");
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     /*Methods are as follows：*/
     public LoginPage(ATM atm){
@@ -42,6 +55,7 @@ public class LoginPage extends JFrame {
         associateAccountsToUsers();
         parseLoanData();
         associateLoansToUsers();
+        atm.getBank().setTime(loadTime());
         //Set flow layout 1 or FlowLayout.CENTER, center alignment
 
         //The first panel: fill in user data
@@ -57,7 +71,6 @@ public class LoginPage extends JFrame {
         JPanel BuJp = new JPanel();
         BuJp.setLayout(new GridLayout(3,1,5,5));
         BuJp.add(Login);
-        BuJp.add(Cancel);
         BuJp.add(Register);  //registration
         add(BuJp); //Add the second panel to the user interface
 
@@ -113,15 +126,6 @@ public class LoginPage extends JFrame {
             }
         });
 
-        //Add a listener event for the re-enter button
-        Cancel.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent arg0) {
-                username.setText("");
-                password.setText("");
-
-            }
-        });
-
         //Add a listening event for the user registration button
         Register.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
@@ -153,7 +157,7 @@ public class LoginPage extends JFrame {
                 if(type.equals("Checking")){
                     account = new CheckingAccount(userId, amount, accID);
                 }
-                else if(type.equals("Savings")){
+                else if(type.equals("Saving")){
                     account = new SavingsAccount(userId, amount, accID);
                 }
                 accounts.add(account);
@@ -184,7 +188,9 @@ public class LoginPage extends JFrame {
                     user = new Manager(firstName, lastName, username, password, null);
                 }
                 else{
-                    user = new Customer(id, firstName, lastName, username, password, null, null);
+                    ArrayList<BankAccount> accounts = new ArrayList<>();
+                    ArrayList<Loan> loans = new ArrayList<>();
+                    user = new Customer(id, firstName, lastName, username, password, accounts, loans);
                 }
                 users.add(user);
                 currentID++;
@@ -335,7 +341,7 @@ public class LoginPage extends JFrame {
                 String[] accountData = line.split(",");
                 int userID = Integer.parseInt(accountData[0]);
                 int linkedAccountID = Integer.parseInt(accountData[1]);
-                int totalBalance = Integer.parseInt(accountData[2]);
+                int totalBalance = (int) Double.parseDouble(accountData[2]);
                 SecurityAccount secAccount = new SecurityAccount(userID, linkedAccountID, totalBalance);
                 // Find the corresponding user and add this account to them
                 for (User user : users) {

@@ -4,35 +4,30 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Bank {
+public class Bank implements Subject{
     private static int time;
     private List<Observer> observers = new ArrayList<>();
 
-    private static List<Stock> market;
+
 
     private static ArrayList<Stock> stocks;
 
-    private static ArrayList<Trade> trades;
+    private static ArrayList<Trade> trades =new ArrayList<>();
     public Bank(){
-        this.market = new ArrayList<>();
-        market.add(new Stock("AAPL", 1000));
         String filePath = "/Users/abdelazimlokma/Desktop/Desktop/Uni/Spring 24/CS 611 OOP/Final Project/repo/Untitled/Stocks.txt";
         stocks = readStocksFromFile(filePath);
 
 
     }
 
-    public static List<Stock> getMarket() {
-        return market;
+    public static void setTime(int time) {
+        Bank.time = time;
     }
-    public static Stock getStock(String ticker){
-        for (Stock s: market){
-            if (s.getTicker().equals(ticker)){
-                return s;
-            }
-        }
-        throw new RuntimeException("Stock not found");
+
+    public static List<Stock> getStocks() {
+        return stocks;
     }
+
 
     public void incrementTime(int numMonths) {
         time += numMonths; // set new time
@@ -72,7 +67,7 @@ public class Bank {
             // Read the file line by line
             while ((line = br.readLine()) != null) {
                 // Split the line using ", " as the delimiter
-                String[] stockData = line.split(",\\s+");
+                String[] stockData = line.split(",");
 
                 // Parse the ticker and price from the line
                 String ticker = stockData[0];
@@ -92,11 +87,27 @@ public class Bank {
         return stocks;
     }
 
-    public static ArrayList<Stock> getStocks(){
-        return stocks;
-    }
 
     public static ArrayList<Trade> getTrades(){
         return trades;
+    }
+
+    @Override
+    public void registerObserver(Observer o) {
+        observers.add(o);
+    }
+
+    @Override
+    public void removeObserver(Observer o) {
+        observers.remove(o);
+
+    }
+
+    @Override
+    public void notifyObservers() {
+        for(Observer o: observers){
+            o.update();
+        }
+
     }
 }

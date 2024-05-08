@@ -114,7 +114,7 @@ public class LoanCreationPage extends JFrame implements Subject{
                     LoginPage.getLoans().add(loan);
                     customer.getLoans().add(loan);
                     JOptionPane.showMessageDialog(null, "Loan created: " + loan);
-                    writeLoanToFile(loan, "/Users/abdelazimlokma/Desktop/Desktop/Uni/Spring 24/CS 611 OOP/ Monsters and Heroes/BankingSystemV2/src/Loans.txt");
+                    writeLoanToFile(loan, "/Users/abdelazimlokma/Desktop/Desktop/Uni/Spring 24/CS 611 OOP/Final Project/repo/Untitled/Loans.txt");
                     notifyObservers();
                 }
                 atm.goBack();

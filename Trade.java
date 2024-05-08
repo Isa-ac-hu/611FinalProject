@@ -49,6 +49,9 @@ public class Trade {
         this.unrealizedGainOrLoss = unrealizedGainOrLoss;
     }
 
+    public void setCurrentPrice(int currentPrice) {
+        this.currentPrice = currentPrice;
+    }
 
     // Method to save to file
     public String serialize() {

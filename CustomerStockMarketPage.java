@@ -2,12 +2,13 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Vector;
 import java.util.stream.Collectors;
-
 public class CustomerStockMarketPage extends JFrame implements Observer{
     private JTable stockTable;
     private JButton buyButton;
@@ -77,14 +78,13 @@ public class CustomerStockMarketPage extends JFrame implements Observer{
     private Vector<Vector<String>> prepareStockTableData() {
         Vector<Vector<String>> data = new Vector<>();
         Customer customer = (Customer) atm.getCurrentUser();
-        SecurityAccount securityAccount = customer.getSecurityAccount();
-
-        if (securityAccount == null) {
+        if (customer.getSecurityAccount() == null) {
             return data;  // If there's no linked security account, return empty data
         }
+        SecurityAccount securityAccount = customer.getSecurityAccount();
 
         // Assuming market stocks and their current prices are retrievable via bank.getMarket()
-        for (Stock stock : bank.getMarket()) {
+        for (Stock stock : bank.getStocks()) {
             Vector<String> row = new Vector<>();
             row.add(stock.getTicker());
             row.add(String.valueOf(stock.getCurrPrice()));
@@ -122,6 +122,7 @@ public class CustomerStockMarketPage extends JFrame implements Observer{
                     Customer customer = (Customer) atm.getCurrentUser();
                     SecurityAccount securityAccount = customer.getSecurityAccount();
                     Trade newTrade = new Trade(securityAccount.getLinkedAccountID(), ticker, currentPrice, currentPrice, quantity);
+//                    writeTradeToFile(newTrade);
                     securityAccount.addTrade(newTrade);
                     trades.add(newTrade);
 
@@ -160,6 +161,7 @@ public class CustomerStockMarketPage extends JFrame implements Observer{
                 if (quantity > 0 && hasSufficientShares(securityAccount, ticker, quantity)) {
                     Trade newTrade = new Trade(securityAccount.getLinkedAccountID(), ticker, currentPrice, currentPrice, -quantity);
                     securityAccount.addTrade(newTrade);
+//                    writeTradeToFile(newTrade);
                     trades.add(newTrade);
 
                     // Update balance
@@ -205,6 +207,8 @@ public class CustomerStockMarketPage extends JFrame implements Observer{
         if (result == JOptionPane.OK_OPTION) {
             SavingsAccount selectedAccount = (SavingsAccount) accountComboBox.getSelectedItem();
             SecurityAccount newSecurityAccount = new SecurityAccount(customer.getUserID(), selectedAccount.getAccountID(), selectedAccount.getBalance());
+            LoginPage.securityAccounts.add(newSecurityAccount);
+//            writeSecurityAccountToFile(newSecurityAccount);
             customer.setSecAcct(newSecurityAccount);
             JOptionPane.showMessageDialog(this, "Security account linked successfully: " + selectedAccount);
             updateButtonStatus(); // Update button status after linking
@@ -234,13 +238,19 @@ public class CustomerStockMarketPage extends JFrame implements Observer{
             // Calculating unrealized and realized gains and the total number of stocks
             double unrealizedGain = 0.0;
             int totalStocks = 0;
-
+            double currentPrice = 0;
             for (Trade trade : securityAccount.getAccTrades()) {
+                for(Stock s: Bank.getStocks()){
+                    if(trade.getStockTicker().equals(s.getTicker())){
+                         currentPrice = s.getCurrPrice();
+                    }
+                }
                 int quantity = trade.getQuantity();
                 double purchasePrice = trade.getPurchasePrice();
-                double currentPrice = trade.getCurrentPrice();
                 totalStocks += quantity;
                 unrealizedGain += (currentPrice - purchasePrice) * quantity;
+                trade.setCurrentPrice((int)currentPrice);
+                trade.setUnrealizedGainOrLoss((int)unrealizedGain);
             }
 
             // Update labels
@@ -253,6 +263,49 @@ public class CustomerStockMarketPage extends JFrame implements Observer{
         }
     }
 
+    public void writeSecurityAccountToFile(SecurityAccount account){
+        String filePath = "/Users/abdelazimlokma/Desktop/Desktop/Uni/Spring 24/CS 611 OOP/Final Project/repo/Untitled/SecAcct.txt";
+        // Format the security account data as a string (e.g., "userID, linkedAccountID, total balance")
+        if(account instanceof SecurityAccount){
+            int userID = account.getUserID();
+            int linkedAccountID = account.getLinkedAccountID();
+            double totalBalance = account.getTotalBalance();
+            String accountData = userID + "," + linkedAccountID + "," + totalBalance + "\n";
+
+            try (FileWriter fileWriter = new FileWriter(filePath, false)) {
+                // Append the userString to the file
+                fileWriter.write(accountData);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
+
+    public void writeTradeToFile(Trade trade){
+        String filePath = "/Users/abdelazimlokma/Desktop/Desktop/Uni/Spring 24/CS 611 OOP/Final Project/repo/Untitled/Trades.txt";
+        // Format the security account data as a string (e.g., "userID, linkedAccountID, total balance")
+
+
+        int securityAccountID = trade.getSecurityAccountID();
+        String stockTicker = trade.getStockTicker();
+        int purchasePrice = trade.getPurchasePrice();
+        int currentPrice = trade.getCurrentPrice();
+        int quantity = trade.getQuantity();
+        int unrealizedGainOrLoss = trade.getUnrealizedGainOrLoss();
+
+        // Format the trade data as a string (e.g., "securityAccountID, stockTicker, purchasePrice, currentPrice, quantity, unrealizedGainOrLoss")
+        String tradeData = securityAccountID + "," + stockTicker + "," + purchasePrice + "," + currentPrice + "," + quantity + "," + unrealizedGainOrLoss + "\n";
+
+        try (FileWriter fileWriter = new FileWriter(filePath, true)) {
+            // Append the userString to the file
+            fileWriter.write(tradeData);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+    }
 
     @Override
     public void update() {

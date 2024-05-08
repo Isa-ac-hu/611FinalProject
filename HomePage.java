@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -12,17 +13,15 @@ public class HomePage extends JFrame implements Observer, Subject{
     private JPanel accountsPanel; // Panel to dynamically update accounts and loans
     private JPanel buttonPanel; // Panel for action buttons
 
-    private ArrayList<Stock> stocks = Bank.getStocks();
+    private ArrayList<Stock> stocks =(ArrayList<Stock>) Bank.getStocks();
     private ArrayList<User> users = LoginPage.getUsers();
     private List<Observer> observers = new ArrayList<>();
-    private Bank bank;
+
 
 
     public HomePage(User user, ATM atm) {
         this.user = user;
         this.atm = atm;
-
-        bank = atm.getBank();
         if(user instanceof Customer){
             initializeCustomerUI();
         }
@@ -31,6 +30,7 @@ public class HomePage extends JFrame implements Observer, Subject{
         }
 
     }
+
 
     private void initializeCustomerUI() {
         setTitle("ObjectBank Home Page");
@@ -77,7 +77,9 @@ public class HomePage extends JFrame implements Observer, Subject{
     }
 
     private void launchLoanCreationPage() {
+
         LoanCreationPage loanPage = new LoanCreationPage((Customer) user, atm);
+//        bank.registerObserver(loanPage.);
         atm.launchWindow(loanPage);
     }
 
@@ -128,7 +130,7 @@ public class HomePage extends JFrame implements Observer, Subject{
         buttonPanel.setPreferredSize(new Dimension(150, 0)); // Set preferred width
 
         // Time display button
-        JButton timeButton = new JButton("Time: " + bank.getTime()); // Display current time as an integer
+        JButton timeButton = new JButton("Time: " + atm.getBank().getTime()); // Display current time as an integer
         buttonPanel.add(timeButton);
 
 
@@ -229,6 +231,7 @@ public class HomePage extends JFrame implements Observer, Subject{
         JButton deleteStockButton = new JButton("Delete Stock");
         deleteStockButton.addActionListener(e -> {
             stocks.remove(selectedIndex);
+            //removedStock();
             stockListModel.remove(selectedIndex);
             dialog.dispose();
         });
@@ -310,6 +313,7 @@ public class HomePage extends JFrame implements Observer, Subject{
                 }
                 Stock newStock = new Stock(name, price);
                 stocks.add(newStock);
+                writeStockToFile();
                 stockListModel.addElement(name + " - Price: $" + price);
                 dialog.dispose();
             } catch (NumberFormatException ex) {
@@ -362,6 +366,19 @@ public class HomePage extends JFrame implements Observer, Subject{
 
     }
 
+    private void saveTime(int t){
+        String filePath = "/Users/abdelazimlokma/Desktop/Desktop/Uni/Spring 24/CS 611 OOP/Final Project/repo/Untitled/Time.txt";
+        try (FileWriter writer = new FileWriter(filePath, false)) { // false to overwrite
+            writer.write(String.valueOf(t));
+            System.out.println("Successfully overwritten the file.");
+        } catch (IOException e) {
+            System.err.println("An error occurred while writing to the file.");
+            e.printStackTrace();
+        }
+    }
+
+
+
     // Handle time adjustment when the time button is clicked
     private void handleTimeAdjustment(JButton timeButton) {
         // Create a popup window with an input box and accept button
@@ -381,14 +398,16 @@ public class HomePage extends JFrame implements Observer, Subject{
 
         // Handle accept button action
         acceptButton.addActionListener(e -> {
-            System.out.println("Hello world");
             try {
                 int adjustment = Integer.parseInt(inputField.getText());
                 if (adjustment > 0) {
-                    bank.incrementTime(adjustment); // Advance time in the bank
+                    atm.getBank().incrementTime(adjustment); // Advance time in the bank
                     // Update the time button display
-
-                    timeButton.setText("Time: " + bank.getTime());
+                    saveTime(atm.getBank().getTime());
+                    for(Loan l: LoginPage.loans){
+                        l.updateDebt(atm.getBank().getTime());
+                    }
+                    timeButton.setText("Time: " + atm.getBank().getTime());
                     dialog.dispose();
                 } else {
                     JOptionPane.showMessageDialog(dialog, "Please enter a positive integer.");
@@ -441,8 +460,7 @@ public class HomePage extends JFrame implements Observer, Subject{
 
     private void createLoanList(Customer customer) {
         List<String> loanDescriptions = customer.getLoans().stream()
-                .map(loan -> String.format("Loan ID: %d, Amount: $%.2f, Date Issued: %d",
-                        loan.getLoanID(), loan.getInitialLoanAmount(), loan.getLoanStartDate()))
+                .map(Loan::toString)  // Directly use Loan's toString method
                 .collect(Collectors.toList());
         JList<String> loansList = new JList<>(loanDescriptions.toArray(new String[0]));
         JScrollPane scrollPane = new JScrollPane(loansList);
@@ -450,6 +468,36 @@ public class HomePage extends JFrame implements Observer, Subject{
         panel.add(new JLabel("Loans"), BorderLayout.NORTH);
         panel.add(scrollPane, BorderLayout.CENTER);
         accountsPanel.add(panel);
+    }
+
+
+    public void removeStocks(ArrayList<Stock> stocks) {
+        // Define the file path for the stocks file
+        String filePath = "/Users/abdelazimlokma/Desktop/Desktop/Uni/Spring 24/CS 611 OOP/Final Project/repo/Untitled/Stocks.txt";
+
+        // Try-with-resources statement to handle file writing
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
+            // Iterate through the updated list of stocks
+            for (Stock stock : stocks) {
+                // Retrieve stock data fields
+                String ticker = stock.getTicker();
+                double value = stock.getCurrPrice();
+
+                // Format the stock data as a string (e.g., "ticker, value")
+                String stockData = ticker + "," + value + "\n";
+
+                // Write the stock data to the file, followed by a newline character
+                try (FileWriter fileWriter = new FileWriter(filePath, true)) {
+                    // Append the userString to the file
+                    fileWriter.write(stockData);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        } catch (IOException e) {
+            // Handle any exceptions that may occur during file writing
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -478,7 +526,29 @@ public class HomePage extends JFrame implements Observer, Subject{
         }
     }
 
+    public void writeStockToFile(){
+        String filePath = "/Users/abdelazimlokma/Desktop/Desktop/Uni/Spring 24/CS 611 OOP/Final Project/repo/Untitled/Stocks.txt";
 
+        // Try-with-resources statement to handle file writing
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
+            // Iterate through the list of stocks
+            for (Stock stock : stocks) {
+                // Retrieve stock data fields
+                String ticker = stock.getTicker();
+                double value = stock.getCurrPrice();
+
+                // Format the stock data as a string (e.g., "ticker, value")
+                String stockData = ticker + "," + value;
+
+                // Write the stock data to the file, followed by a newline character
+                writer.write(stockData);
+                writer.newLine();
+            }
+        } catch (IOException e) {
+            // Handle any exceptions that may occur during file writing
+            e.printStackTrace();
+        }
+    }
 
 
 }

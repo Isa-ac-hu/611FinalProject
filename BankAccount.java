@@ -33,7 +33,7 @@ public abstract class BankAccount {
 
     @Override
     public String toString() {
-        return "Account ID: " + accountID + ", balance =" + balance + "]";
+        return "Account ID: " + accountID + ", balance =" + balance ;
     }
 
     public int getUserID(){

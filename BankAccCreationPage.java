@@ -1,6 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -67,26 +69,56 @@ public class BankAccCreationPage extends JFrame implements Subject{
         }
 
         double balance = Double.parseDouble(balanceStr);
+        double initialBalance = Double.parseDouble(balanceStr);
+        double fee = initialBalance * 0.02; // 2% fee on the initial deposit
+        double finalBalance = initialBalance - fee;
 
         // Create the account based on the selected type
         BankAccount newAccount = null;
         switch (selectedType) {
             case SAVINGS:
-                newAccount = new SavingsAccount(customer.getUserID(), balance, null);
+                newAccount = new SavingsAccount(customer.getUserID(), finalBalance, null);
                 break;
             case CHECKING:
-                newAccount = new CheckingAccount(customer.getUserID(), balance, null);
+                newAccount = new CheckingAccount(customer.getUserID(), finalBalance, null);
                 break;
         }
 
         if (newAccount != null) {
-            JOptionPane.showMessageDialog(this, "Account created successfully!");
+            writeAccountToFile(newAccount);
+            JOptionPane.showMessageDialog(this, "Account created successfully! Fee charged: $" + String.format("%.2f", fee));
             customer.getAccounts().add(newAccount);
             LoginPage.getAccounts().add(newAccount);
             notifyObservers();
             atm.goBack();
         } else {
             JOptionPane.showMessageDialog(this, "Failed to create account. Please try again.");
+        }
+    }
+
+    public void writeAccountToFile(BankAccount account){
+        String filePath = "/Users/abdelazimlokma/Desktop/Desktop/Uni/Spring 24/CS 611 OOP/Final Project/repo/Untitled/Accounts.txt";
+        int userID = account.getUserID();
+        String type = "";
+        if(account instanceof CheckingAccount) {
+            type = "Checking";
+        }
+        if(account instanceof SavingsAccount) {
+            type = "Saving";
+        }
+        // Assuming type can be retrieved as a string
+        double balance = account.getBalance();
+        int accountID = account.getAccountID();
+
+        // Format the account data as a string (e.g., "UserID, type, balance, AccountID")
+        String accountData = userID + "," + type + "," + balance + "," + accountID+"\n";
+
+        // Write the account data to the file, followed by a newline character
+        try (FileWriter fileWriter = new FileWriter(filePath, true)) {
+            // Append the userString to the file
+            fileWriter.write(accountData);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 

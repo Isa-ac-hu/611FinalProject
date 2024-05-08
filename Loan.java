@@ -94,4 +94,16 @@ public class Loan implements Observer {
     public String toString(){
         return "LoanID: " + loanID + " Amount Owed: " + debtAmount + " Creation Date: " + loanStartDate + " Collateral: " + collateral.getName();
     }
+
+    public void updateDebt(int currentTime) {
+        // Calculate the number of complete months elapsed since the last update
+        int monthsElapsed = (currentTime - this.loanStartDate) ; // Assuming each month has 30 days
+        if (monthsElapsed > 0) {
+            double monthlyInterestRate = this.annualInterestRate ;
+            for (int i = 0; i < monthsElapsed; i++) {
+                this.debtAmount *= (1 + monthlyInterestRate);
+            }
+            this.loanStartDate += monthsElapsed; // Update start date to reflect the number of months accounted
+        }
+    }
 }

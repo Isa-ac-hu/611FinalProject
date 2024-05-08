@@ -57,6 +57,7 @@ public class ATM {
 
     // Goes back to the previous window if possible
     public void goBack() {
+        saveData();
         if (windowStack.size() > 1) {
             JFrame currentWindow = windowStack.pop();
             currentWindow.dispose(); // Close current window
@@ -66,8 +67,6 @@ public class ATM {
             // If it's the last window, just show it again without popping it from the stack
             windowStack.peek().setVisible(true);
         }else {
-            saveData();
-
             System.exit(0); // Exit application if no more windows in the stack
         }
     }
@@ -88,10 +87,10 @@ public class ATM {
         ArrayList<BankAccount> accounts = LoginPage.getAccounts();
         ArrayList<Loan> loans = LoginPage.getLoans();
         ArrayList<SecurityAccount> securityAccounts = LoginPage.getSecurityAccounts();
-        ArrayList<Stock> stocks = Bank.getStocks();
+        ArrayList<Stock> stocks = (ArrayList<Stock>) Bank.getStocks();
         ArrayList<Trade> trades = Bank.getTrades();
 
-        String filePath = "/Users/abdelazimlokma/Desktop/Desktop/Uni/Spring 24/CS 611 OOP/ Monsters and Heroes/BankingSystemV2/src/Users.txt";
+        String filePath = "/Users/abdelazimlokma/Desktop/Desktop/Uni/Spring 24/CS 611 OOP/Final Project/repo/Untitled/Users.txt";
 
         // Try-with-resources statement to handle file writing
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
@@ -105,7 +104,7 @@ public class ATM {
                 String password = user.getPassword();
 
                 // Format the user data as a string (e.g., "ID, firstName, lastName, username, password")
-                String userData = id + ", " + firstName + ", " + lastName + ", " + username + ", " + password;
+                String userData = id + "," + firstName + "," + lastName + "," + username + "," + password;
 
                 // Write the user data to the file, followed by a newline character
                 writer.write(userData);
@@ -116,7 +115,7 @@ public class ATM {
             e.printStackTrace();
         }
 
-        filePath = "/Users/abdelazimlokma/Desktop/Desktop/Uni/Spring 24/CS 611 OOP/ Monsters and Heroes/BankingSystemV2/src/Accounts.txt";
+        filePath = "/Users/abdelazimlokma/Desktop/Desktop/Uni/Spring 24/CS 611 OOP/Final Project/repo/Untitled/Accounts.txt";
 
         // Try-with-resources statement to handle file writing
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
@@ -136,7 +135,7 @@ public class ATM {
                 int accountID = account.getAccountID();
 
                 // Format the account data as a string (e.g., "UserID, type, balance, AccountID")
-                String accountData = userID + ", " + type + ", " + balance + ", " + accountID;
+                String accountData = userID + "," + type + "," + balance + "," + accountID;
 
                 // Write the account data to the file, followed by a newline character
                 writer.write(accountData);
@@ -148,7 +147,7 @@ public class ATM {
         }
 
         // Define the file path for Loans.txt
-        filePath = "/Users/abdelazimlokma/Desktop/Desktop/Uni/Spring 24/CS 611 OOP/ Monsters and Heroes/BankingSystemV2/src/Loans.txt";
+        filePath = "/Users/abdelazimlokma/Desktop/Desktop/Uni/Spring 24/CS 611 OOP/Final Project/repo/Untitled/Loans.txt";
 
         // Try-with-resources statement to handle file writing
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
@@ -163,7 +162,7 @@ public class ATM {
                 double collateralAmount = loan.getCollateral() != null ? loan.getCollateral().getValue() : 0.0;
 
                 // Format the loan data as a string (e.g., "LoanID, customerID, initialLoanAmount, debtAmount, collateralName, collateralAmount")
-                String loanData = loanID + ", " + customerID + ", " + initialLoanAmount + ", " + debtAmount + ", " + collateralName + ", " + collateralAmount;
+                String loanData = loanID + "," + customerID + "," + initialLoanAmount + "," + debtAmount + "," + collateralName + "," + collateralAmount + "," + loan.getLoanStartDate();
 
                 // Write the loan data to the file, followed by a newline character
                 writer.write(loanData);
@@ -175,7 +174,7 @@ public class ATM {
         }
 
         // Define the file path for SecurityAccounts.txt
-        filePath = "/Users/abdelazimlokma/Desktop/Desktop/Uni/Spring 24/CS 611 OOP/ Monsters and Heroes/BankingSystemV2/src/SecAcct.txt";
+        filePath = "/Users/abdelazimlokma/Desktop/Desktop/Uni/Spring 24/CS 611 OOP/Final Project/repo/Untitled/SecAcct.txt";
 
         // Try-with-resources statement to handle file writing
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
@@ -187,7 +186,7 @@ public class ATM {
                 double totalBalance = account.getTotalBalance();
 
                 // Format the security account data as a string (e.g., "userID, linkedAccountID, total balance")
-                String accountData = userID + ", " + linkedAccountID + ", " + totalBalance;
+                String accountData = userID + "," + linkedAccountID + "," + totalBalance;
 
                 // Write the account data to the file, followed by a newline character
                 writer.write(accountData);
@@ -198,7 +197,7 @@ public class ATM {
             e.printStackTrace();
         }
 
-        filePath = "/Users/abdelazimlokma/Desktop/Desktop/Uni/Spring 24/CS 611 OOP/ Monsters and Heroes/BankingSystemV2/src/Stocks.txt";
+        filePath = "/Users/abdelazimlokma/Desktop/Desktop/Uni/Spring 24/CS 611 OOP/Final Project/repo/Untitled/Stocks.txt";
 
         // Try-with-resources statement to handle file writing
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
@@ -209,7 +208,7 @@ public class ATM {
                 double value = stock.getCurrPrice();
 
                 // Format the stock data as a string (e.g., "ticker, value")
-                String stockData = ticker + ", " + value;
+                String stockData = ticker + "," + value;
 
                 // Write the stock data to the file, followed by a newline character
                 writer.write(stockData);
@@ -220,7 +219,7 @@ public class ATM {
             e.printStackTrace();
         }
 
-        filePath = "/Users/abdelazimlokma/Desktop/Desktop/Uni/Spring 24/CS 611 OOP/ Monsters and Heroes/BankingSystemV2/src/Trades.txt";
+        filePath = "/Users/abdelazimlokma/Desktop/Desktop/Uni/Spring 24/CS 611 OOP/Final Project/repo/Untitled/Trades.txt";
 
         // Try-with-resources statement to handle file writing
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
@@ -235,7 +234,7 @@ public class ATM {
                 int unrealizedGainOrLoss = trade.getUnrealizedGainOrLoss();
 
                 // Format the trade data as a string (e.g., "securityAccountID, stockTicker, purchasePrice, currentPrice, quantity, unrealizedGainOrLoss")
-                String tradeData = securityAccountID + ", " + stockTicker + ", " + purchasePrice + ", " + currentPrice + ", " + quantity + ", " + unrealizedGainOrLoss;
+                String tradeData = securityAccountID + "," + stockTicker + "," + purchasePrice + "," + currentPrice + "," + quantity + "," + unrealizedGainOrLoss;
 
                 // Write the trade data to the file, followed by a newline character
                 writer.write(tradeData);

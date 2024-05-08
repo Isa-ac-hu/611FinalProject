@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class RegisterPage extends JFrame {
 
@@ -110,6 +111,8 @@ public class RegisterPage extends JFrame {
                         return;
                     }
 
+
+
                     String firstNameString = firstName.getText().toString();
                     String lastNameString = lastName.getText().toString();
                     //Username
@@ -117,15 +120,23 @@ public class RegisterPage extends JFrame {
                     //Password
                     String passwordString = new String(password.getPassword());
 
+
+                    ArrayList<BankAccount> accounts = new ArrayList<>();
+                    ArrayList<Loan> loans = new ArrayList<>();
                     User user = new Customer(LoginPage.getCurrentID(), firstNameString,
-                            lastNameString, userNameString, passwordString, null, null);
+                            lastNameString, userNameString, passwordString, accounts, loans);
 
                     try{
-                        writeUserToFile(user, "/Users/abdelazimlokma/Desktop/Desktop/Uni/Spring 24/CS 611 OOP/ Monsters and Heroes/BankingSystemV2/src/Accounts.txt");
+                        writeUserToFile(user, "/Users/abdelazimlokma/Desktop/Desktop/Uni/Spring 24/CS 611 OOP/Final Project/repo/Untitled/Users.txt");
                         LoginPage.addUser(user);
                     }catch (Exception e){
                         e.printStackTrace();
                     }
+
+                    JOptionPane.showMessageDialog(null,"Account created successfully!");
+                    HomePage homePage = new HomePage(user, atm);
+                    atm.setHomePage(homePage);
+                    atm.launchWindow(homePage);
                 }else {
                     JOptionPane.showMessageDialog(null,"Username and password cannot be empty");
                     return;
