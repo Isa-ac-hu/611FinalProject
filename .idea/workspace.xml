@@ -5,25 +5,120 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce50dedd-23de-4d8c-8af8-174d37c35a14" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/account.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/account.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/AccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/AccountPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/CustomerPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/CustomerPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/data/account.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/data/account.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/AccountPage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/frontend/AccountPage$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/AccountPage$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/frontend/AccountPage$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/AccountPage$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/frontend/AccountPage$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/AccountPage$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/frontend/AccountPage$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/AccountPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/frontend/AccountPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/CustomerPage$BankAccountListRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/frontend/CustomerPage$BankAccountListRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/CustomerPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/frontend/CustomerPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/frontend/LoginPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/services/impl/BankAccountImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/services/impl/BankAccountImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/services/intf/IBankAccountIntf.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/611FinalProject/services/intf/IBankAccountIntf.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/impl/BankAccountImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/impl/BankAccountImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/intf/IBankAccountIntf.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/intf/IBankAccountIntf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ATM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bank.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BankAccCreationPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BankAccTypes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BankAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CheckingAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Collateral.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CustomerStockMarketPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DepositWithdrawPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Input.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Loan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoanCreationPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoanPaymentPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Manager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Observer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RegisterPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SavingsAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SecurityAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Stock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Subject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Trade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/account.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/user.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dto/BankAccount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dto/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dto/Manager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dto/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/AccountPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/CustomerPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/LoanCreationPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/LoginPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/RegisterPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/TransferPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/fastjson-1.2.28.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/jackson-annotations-2.14.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/jackson-core-2.14.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/jackson-databind-2.14.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/jackson-module-parameter-names-2.9.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/Bank.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/BankAccTypes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/Collateral.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/Input.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/Loan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/Observer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/.idea/libraries/lib.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/611FinalProject.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/data/account.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/data/user.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/dto/BankAccount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/dto/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/dto/Manager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/dto/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/AccountPage$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/AccountPage$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/AccountPage$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/AccountPage$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/AccountPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/CustomerPage$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/CustomerPage$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/CustomerPage$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/CustomerPage$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/CustomerPage$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/CustomerPage$BankAccountListRenderer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/CustomerPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/LoanCreationPage$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/LoanCreationPage$CreateLoanAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/LoanCreationPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/LoginPage$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/LoginPage$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/LoginPage$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/LoginPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/RegisterPage$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/RegisterPage$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/RegisterPage$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/RegisterPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/TransferPage$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/TransferPage$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/TransferPage$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/TransferPage$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/TransferPage$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/frontend/TransferPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/lib/fastjson-1.2.28.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/lib/jackson-annotations-2.14.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/lib/jackson-core-2.14.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/lib/jackson-databind-2.14.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/lib/jackson-module-parameter-names-2.9.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/logic/Bank.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/logic/BankAccTypes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/logic/Collateral.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/logic/Input.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/logic/Loan.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/logic/Observer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/services/impl/BankAccountImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/services/impl/UserImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/services/intf/IBankAccountIntf.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/611FinalProject/services/intf/IUserIntf.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/impl/BankAccountImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/impl/UserImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/intf/IBankAccountIntf.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/intf/IUserIntf.java" beforeDir="false" />
     </list>
     <list id="abb6e8c1-e0c0-4f07-9d29-f0fc2566127d" name="Changes by isaac" comment="" />
     <list id="9f77dce7-d952-4601-8721-d33df14a1075" name="Changes by jiang" comment="" />
@@ -35,8 +130,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -69,7 +164,14 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main (1)">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="611FinalProject" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="frontend.Main" />
       <module name="611FinalProject" />
@@ -85,6 +187,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -92,8 +195,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+        <option value="jdk-1.8.0_402-corretto-1.8.0_402-4caba194b151-995e55e7" />
       </set>
     </attachedChunks>
   </component>
@@ -113,6 +215,7 @@
       <workItem from="1715000384357" duration="2121000" />
       <workItem from="1715083885162" duration="2718000" />
       <workItem from="1715086710660" duration="3020000" />
+      <workItem from="1715180980872" duration="749000" />
     </task>
     <servers />
   </component>

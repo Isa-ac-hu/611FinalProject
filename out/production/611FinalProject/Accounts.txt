@@ -1,0 +1,6 @@
+1,Checking,1000.00,0
+1,Savings,5000.00,1
+2,Checking,1500.00,2
+2,Savings,2500.00,3
+3,Checking,2000.00,4
+1,Savings,1234.00,5
